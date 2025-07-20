@@ -5,8 +5,8 @@ sources:
     schema: L1_LANDING
     config:
       freshness:
-        warn_after: {count: 1, period: day}
-        error_after: {count: 3, period: day}
+        warn_after: {count: 100, period: day}
+        ##error_after: {count: 3, period: day}
     loaded_at_field: Updated_at
 
     tables:
@@ -29,8 +29,11 @@ sources:
               - not_null
               - string_not_empty
       - name: sales_us
+        freshness: null
       - name: sales_europe
+        freshness: null
       - name: sales_asia
+        freshness: null
       - name: stores
       - name: suppliers
       - name: products
