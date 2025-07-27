@@ -1,0 +1,11 @@
+packages:
+  - name: dbt_utils
+    package: dbt-labs/dbt_utils
+    version: 1.3.0
+  - git: https://github.com/metaplane/dbt-expectations.git
+    name: dbt_expectations
+    revision: 008e783c0e5bb1b40e767eb5c60afedbc5d46dc8
+  - name: dbt_date
+    package: godatadriven/dbt_date
+    version: 0.15.0
+sha1_hash: dacba8c841c723f923adb295afadab71b164cd94
