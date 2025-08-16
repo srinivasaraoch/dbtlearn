@@ -46,6 +46,8 @@ sources:
       - name: sales_us
       - name: sales_uk
       - name: sales_india
+      - name: travellers
+      - name: trip_bookings
 
   - name: exttbl
     database: SOURCE_DEV
