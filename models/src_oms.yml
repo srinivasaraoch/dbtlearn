@@ -46,3 +46,19 @@ sources:
       - name: sales_us
       - name: sales_uk
       - name: sales_india
+
+  - name: exttbl
+    database: SOURCE_DEV
+    schema: EXT_TBLS
+    tables:
+      - name: employees_ext
+        external:
+          location: "@source_dev.ext_tbls.s3_stage_emp"  
+          file_format: "(type = csv, field_delimiter = ',', skip_header = 1, trim_space = true)"
+        columns:
+          - name: filename
+            data_type: varchar
+            expression: metadata$filename
+          - name: asof_date        # 👈 file modified timestamp
+            data_type: timestamp_ntz
+            expression: metadata$file_last_modified
